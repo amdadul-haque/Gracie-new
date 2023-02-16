@@ -3,35 +3,53 @@ const menuContent = document.getElementById("menuContent")
 const menuOuter = document.getElementById("menu-outer")
 const menuLinks = document.querySelectorAll('.menu-links');
 const copyrightYear = document.getElementById('copyright-year');
+const click = document.getElementById('click')
 
+let menuHeight = false;
+const currentPos = -350;
+let pos = currentPos;
+var id = null
 menuBtn.addEventListener('click', () => {
-  menuContent.classList.toggle('hidden');
   menuOuter.classList.toggle('menu-outer-blur');
   menuOuter.classList.remove('hidden');
+  if (menuHeight) {
+    menuHeight = false
+    clearInterval(id);
+    id = setInterval(() => {
+      if (pos <= currentPos) {
+        clearInterval(id);
+      } else {
+        pos -= 3;
+        menuContent.style.transform = `translateY(${pos}px)`
+      }
+    }, 10)
+  }
+  else {
+    menuHeight = true
+    clearInterval(id);
+    id = setInterval(() => {
+      if (pos >= 0) {
+        clearInterval(id);
+      } else {
+        pos += 3;
+        menuContent.style.transform = `translateY(${pos}px)`
+      }
+    }, 10)
+  }
+  console.log(pos)
+
 })
 
 menuLinks.forEach((menuLink) => {
   menuLink.addEventListener('click', () => {
-    menuContent.classList.toggle('hidden')
-    menuOuter.classList.add('hidden')
+    menuOuter.classList.toggle('menu-outer-blur');
+    menuContent.style.transform = `translateY(${currentPos}px)`
+    pos = currentPos;
+    menuHeight = !menuHeight;
   })
 })
 
-// menuBtn.addEventListener('mouseover', () => {
-//   menuContent.classList.remove('hidden');
-//   menuOuter.classList.remove('hidden')
-//   menuOuter.classList.add('menu-outer-blur')
-// })
-
-// menuBtn.addEventListener('mouseout', () => {
-//   menuContent.classList.toggle('hidden')
-//   menuOuter.classList.add('hidden')
-// })
-
-
-// menuContent.addEventListener('mouseout', () => {
-//   menuContent.classList.toggle('hidden')
-//   menuOuter.classList.add('hidden')
-// })
-
 document.getElementById('copyright-year').innerHTML = (new Date).getFullYear();
+
+
+
