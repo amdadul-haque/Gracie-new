@@ -293,9 +293,19 @@ img {
   left: 1px;
 }
 
+object {
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
 /* ========================== END OF GLOBAL STYLES =========================== */
 
-/*==========================HEADER=========================== */
+/*========================== HERO =========================== */
 #hero {
   background: url('https://source.unsplash.com/random');
   background-size: cover;
@@ -304,11 +314,6 @@ img {
 
 .hero-front-img-container {
   max-width: 500px;
-  /* height: 500px;
-  width: 500px;
-  background: url('https://source.unsplash.com/400x400');
-  background-size: cover;
-  background-attachment: fixed; */
 }
 
 /* ========================== MENU CONTENT =========================== */
@@ -319,7 +324,7 @@ img {
   top: 0;
   left: 0;
   z-index: 1;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
 }
 
 .menuBtn-container {
@@ -331,10 +336,9 @@ img {
 #menuContent {
   top: 70px;
   right: 10px;
-  height: 350px;
+  height: 0px;
   overflow-y: hidden;
   animation: 2s;
-  transform: translateY(-350px);
   z-index: 2;
 }
 
@@ -347,28 +351,6 @@ img {
   position: relative;
 }
 
-
-.menu-circle {
-  display: block;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
-  background-color: #fff;
-  position: relative;
-}
-
-.button-10:hover .menu-circle::after {
-  content: "";
-  height: 60%;
-  width: 60%;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000;
-  border: 5px solid #fff;
-}
 
 /* ========================== SECTION 1 =========================== */
 .common-section {
