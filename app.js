@@ -2,11 +2,11 @@ const headerDiv = document.getElementById('header');
 const footerDiv = document.getElementById('footer');
 
 let menuHeight = false;
-const currentPos = 0;
+const currentPos = -300;
 let pos = currentPos;
 var id = null
 
-const fullHeight = 300;
+const fullHeight = 00;
 const speed = 3;
 
 fetch('./header.html')
@@ -31,7 +31,8 @@ fetch('./header.html')
             clearInterval(id);
           } else {
             pos -= speed;
-            menuContent.style.height = `${pos}px`
+            // menuContent.style.height = `${pos}px`
+            menuContent.style.transform = `translateY(${pos}px)`
           }
         }, 10)
 
@@ -46,7 +47,8 @@ fetch('./header.html')
             clearInterval(id);
           } else {
             pos += speed;
-            menuContent.style.height = `${pos}px`
+            // menuContent.style.height = `${pos}px`
+            menuContent.style.transform = `translateY(${pos}px)`
           }
         }, 10)
       }
@@ -57,7 +59,8 @@ fetch('./header.html')
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', () => {
         menuOuter.classList.toggle('menu-outer-blur');
-        menuContent.style.height = `${currentPos}px`
+        // menuContent.style.height = `${currentPos}px`
+        menuContent.style.transform = `translateY(${currentPos}px)`
         pos = currentPos;
         menuHeight = !menuHeight;
       })

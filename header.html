@@ -1,16 +1,15 @@
-<div class="menu-container flex-col items-end relative">
-  <div class="menuBtn-container fixed">
+<div class="menuBtn-outer fixed">
+  <div class="flex justify-end">
     <button id="menuBtn" class="button-10">Menu</button>
   </div>
-  <nav id="menuContent" class="fixed">
-    <div class="menu-links-container flex-col items-end gap-2">
-      <!-- Added new menu? please increase 'fullHeight' by 80 (for each menu added) in app.js line no. 13 -->
+  <div class="menuContent-outer">
+    <div id="menuContent" class="flex-col items-end gap-2">
       <a href="index.html" class="button-10 menu-links">Home</a>
       <a href="token-sale.html" class="button-10 menu-links">Token Sale</a>
       <a href="about-us.html" class="button-10 menu-links">About US</a>
       <a href="#footer" class="button-10 menu-links">Footer</a>
     </div>
-  </nav>
+  </div>
 </div>
 
 <div id="menu-outer" class="w-full h-full">
