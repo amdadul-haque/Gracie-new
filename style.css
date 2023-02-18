@@ -344,12 +344,13 @@ iframe {
 .menuContent-outer {
   position: relative;
   top: -75px;
-  height: 400px;
+  height: 300px;
   overflow-y: hidden;
 }
 
 #menuContent {
   position: absolute;
+  padding-top: 5px;
   right: 0;
   z-index: 2;
   transform: translateY(-300px);
