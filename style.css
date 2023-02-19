@@ -293,21 +293,26 @@ img {
   left: 1px;
 }
 
-object {
-  height: 100%;
-  width: 100%;
+
+main {
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-iframe {
-  height: 100%;
-  width: 100%;
+main>section {
+  height: 100vh;
+  scroll-snap-align: start;
 }
+
 
 /* ========================== END OF GLOBAL STYLES =========================== */
 
 /*========================== HERO =========================== */
 #hero {
-  background: url('https://source.unsplash.com/random');
+  /* background: url('https://source.unsplash.com/random'); */
+  background: url('./img/background.png');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -319,7 +324,7 @@ iframe {
 /* ========================== MENU CONTENT =========================== */
 
 .menu-outer-blur {
-  background-color: rgba(0, 0, 0, .2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   position: fixed;
   top: 0;
   left: 0;
@@ -329,7 +334,7 @@ iframe {
 
 .menuBtn-outer {
   top: 10px;
-  right: 0px;
+  right: 20px;
   width: 300px;
   margin-right: 10px;
   z-index: 3;

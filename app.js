@@ -7,7 +7,7 @@ let pos = currentPos;
 var id = null
 
 const fullHeight = 00;
-const speed = 3;
+const speed = 5;
 
 fetch('./header.html')
   .then(response => response.text())
