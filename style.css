@@ -306,7 +306,6 @@ main>section {
   scroll-snap-align: start;
 }
 
-
 /* ========================== END OF GLOBAL STYLES =========================== */
 
 /*========================== HERO =========================== */
@@ -325,6 +324,7 @@ main>section {
 
 .menu-outer-blur {
   /* background-color: rgba(0, 0, 0, 0.2); */
+  max-width: calc(100vw - 20px);
   position: fixed;
   top: 0;
   left: 0;
@@ -616,7 +616,7 @@ main>section {
 
 /* ========================== FOOTER =========================== */
 #footer {
-  /* height: 70vh; */
+  height: auto !important;
   background-color: #eee;
 }
 
@@ -689,6 +689,10 @@ ul li a:hover {
 
 
 @media only screen and (max-width: 500px) {
+  .menuBtn-outer {
+    right: 5px;
+  }
+
   .common-section {
     grid-template-columns: 1fr;
   }
