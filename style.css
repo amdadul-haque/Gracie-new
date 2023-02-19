@@ -21,6 +21,11 @@
   scroll-behavior: auto;
 }
 
+@font-face {
+  font-family: 'Magical_Night';
+  src: url('./font/Magical_Night.ttf');
+}
+
 h1,
 h3,
 h3,
@@ -31,6 +36,7 @@ p,
 a {
   color: #222;
 }
+
 
 .container {
   max-width: 1300px;
@@ -217,6 +223,7 @@ img {
   left: 0;
   transition: all 0.15s linear 0s;
   /* position: relative; */
+  font-family: 'Magical_Night', 'Open Sans', sans-serif;
   display: inline-block;
   cursor: pointer;
   border: none;
@@ -224,7 +231,6 @@ img {
   background-color: #FFE800;
   text-transform: uppercase;
   color: #404040;
-  font-family: arial;
   letter-spacing: 1px;
   box-shadow: -6px 6px 0 #404040;
   text-decoration: none;
@@ -306,6 +312,8 @@ main>section {
   scroll-snap-align: start;
 }
 
+
+
 /* ========================== END OF GLOBAL STYLES =========================== */
 
 /*========================== HERO =========================== */
@@ -323,13 +331,13 @@ main>section {
 /* ========================== MENU CONTENT =========================== */
 
 .menu-outer-blur {
-  /* background-color: rgba(0, 0, 0, 0.2); */
   max-width: calc(100vw - 20px);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
   backdrop-filter: blur(8px);
+  transition: 1s;
 }
 
 .menuBtn-outer {
@@ -362,16 +370,14 @@ main>section {
 }
 
 
-
-
-
 /* ========================== SECTION 1 =========================== */
 .common-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.section-title {
+.page-title {
+  font-family: 'Magical_Night', 'Open Sans', sans-serif;
   font-size: 30px;
   margin: 30px 0;
 }
@@ -399,7 +405,7 @@ main>section {
   margin-bottom: 0;
 }
 
-.token .section-title {
+.token .page-title {
   margin-top: 0;
 }
 
@@ -572,7 +578,6 @@ main>section {
   align-items: center;
 }
 
-.section-title,
 .section-title {
   font-size: 30px;
   margin-bottom: 30px;

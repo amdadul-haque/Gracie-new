@@ -24,7 +24,7 @@ fetch('./header.html')
         setTimeout(() => {
           menuOuter.classList.toggle('menu-outer-blur');
           menuOuter.classList.remove('hidden');
-        }, 100)
+        }, 1000)
         clearInterval(id);
         id = setInterval(() => {
           if (pos <= currentPos) {
@@ -32,7 +32,6 @@ fetch('./header.html')
           } else {
             pos -= speed;
             menuContentOuter.style.height = `${pos}px`
-            // menuContentOuter.style.transform = `translateY(${pos}px)`
           }
         }, 10)
 
@@ -48,7 +47,6 @@ fetch('./header.html')
           } else {
             pos += speed;
             menuContentOuter.style.height = `${pos}px`
-            // menuContentOuter.style.transform = `translateY(${pos}px)`
           }
         }, 10)
       }
@@ -59,8 +57,7 @@ fetch('./header.html')
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', () => {
         menuOuter.classList.toggle('menu-outer-blur');
-        // menuContentOuter.style.height = `${currentPos}px`
-        // menuContentOuter.style.transform = `translateY(${currentPos}px)`
+        menuContentOuter.style.height = `${currentPos}px`
         pos = currentPos;
         menuHeight = !menuHeight;
       })
