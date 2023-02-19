@@ -346,10 +346,10 @@ main>section {
   z-index: 4;
 }
 
-.menuContent-outer {
+#menuContent-outer {
   position: relative;
   top: -75px;
-  height: 300px;
+  height: 00px;
   overflow-y: hidden;
 }
 
@@ -358,7 +358,7 @@ main>section {
   padding-top: 5px;
   right: 0;
   z-index: 2;
-  transform: translateY(-300px);
+  /* transform: translateY(-300px); */
 }
 
 

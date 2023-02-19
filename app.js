@@ -2,11 +2,11 @@ const headerDiv = document.getElementById('header');
 const footerDiv = document.getElementById('footer');
 
 let menuHeight = false;
-const currentPos = -300;
+const currentPos = 00;
 let pos = currentPos;
 var id = null
 
-const fullHeight = 00;
+const fullHeight = 300;
 const speed = 5;
 
 fetch('./header.html')
@@ -14,7 +14,7 @@ fetch('./header.html')
   .then(data => {
     headerDiv.innerHTML = data;
     const menuBtn = document.getElementById("menuBtn")
-    const menuContent = document.getElementById("menuContent")
+    const menuContentOuter = document.getElementById("menuContent-outer")
     const menuOuter = document.getElementById("menu-outer")
     const menuLinks = document.querySelectorAll('.menu-links');
 
@@ -31,8 +31,8 @@ fetch('./header.html')
             clearInterval(id);
           } else {
             pos -= speed;
-            // menuContent.style.height = `${pos}px`
-            menuContent.style.transform = `translateY(${pos}px)`
+            menuContentOuter.style.height = `${pos}px`
+            // menuContentOuter.style.transform = `translateY(${pos}px)`
           }
         }, 10)
 
@@ -47,8 +47,8 @@ fetch('./header.html')
             clearInterval(id);
           } else {
             pos += speed;
-            // menuContent.style.height = `${pos}px`
-            menuContent.style.transform = `translateY(${pos}px)`
+            menuContentOuter.style.height = `${pos}px`
+            // menuContentOuter.style.transform = `translateY(${pos}px)`
           }
         }, 10)
       }
@@ -59,8 +59,8 @@ fetch('./header.html')
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', () => {
         menuOuter.classList.toggle('menu-outer-blur');
-        // menuContent.style.height = `${currentPos}px`
-        menuContent.style.transform = `translateY(${currentPos}px)`
+        // menuContentOuter.style.height = `${currentPos}px`
+        // menuContentOuter.style.transform = `translateY(${currentPos}px)`
         pos = currentPos;
         menuHeight = !menuHeight;
       })
