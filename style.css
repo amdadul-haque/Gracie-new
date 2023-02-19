@@ -655,16 +655,16 @@ ul li a:hover {
 /* ========================== RESPONSIVE =========================== */
 
 @media only screen and (max-width: 1100px) {
-  /* .menuBtn-container {
-    top: 10px;
+  .menu-outer-blur {
+    max-width: calc(100vw - 15px);
   }
-
-  #menuContent {
-    top: 70px;
-  } */
 }
 
 @media only screen and (max-width: 800px) {
+  .menu-outer-blur {
+    max-width: calc(100vw - 10px);
+  }
+
   .team-card-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -689,6 +689,10 @@ ul li a:hover {
 
 
 @media only screen and (max-width: 500px) {
+  .menu-outer-blur {
+    max-width: calc(100vw - 5px);
+  }
+
   .menuBtn-outer {
     right: 5px;
   }
