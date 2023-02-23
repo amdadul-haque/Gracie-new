@@ -19,6 +19,7 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: auto;
+  transition: all .3s;
 }
 
 @font-face {
@@ -558,27 +559,9 @@ main>section {
 }
 
 .team-card {
-  /* border: 2px solid black;
-  background-color: var(--main-white);
-  padding: 1rem;
-  margin: .5rem; */
   position: relative;
 }
 
-/* .team-card:hover {
-  background: var(--main-bg);
-  transition: var(--main-transition);
-} */
-
-/* .team-card:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(6px);
-} */
 
 .card-hover-brief {
   position: absolute;
@@ -610,7 +593,6 @@ main>section {
   display: flex;
   transition: 1s;
 }
-
 
 
 .card-hover-brief>* {
@@ -646,7 +628,10 @@ main>section {
   background-color: #fb9bcb;
   border-radius: 30px;
   display: none;
+  animation: popup 2s;
+  animation-fill-mode: forwards;
 }
+
 
 .team-popup-container .team-popup-img {
   height: 50%;
@@ -709,20 +694,6 @@ main>section {
 
 .popup-icons i {
   color: #fb9bcb;
-}
-
-.team-card-desc {
-  margin-top: 1rem;
-}
-
-.team-member-name {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 30px;
-}
-
-.team-member-deg {
-  line-height: 25px;
 }
 
 /* ========================== FOOTER =========================== */

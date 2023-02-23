@@ -46,7 +46,7 @@ teamMembers.forEach(member => {
     while (popupContainer.firstChild) {
       popupContainer.removeChild(popupContainer.firstChild);
     }
-    popupContainer.style.display = 'block'
+
 
     // first part of the popup-container popup IMG
     const teamPopupImg = document.createElement("div");
@@ -125,11 +125,30 @@ teamMembers.forEach(member => {
     popupContainer.appendChild(teamPopupDescription)
 
     console.log(member.name, member.designation)
+    popupContainer.style.display = 'block'
+    popupContainer.style.opacity = 0;
 
+    var interval = setInterval(function () {
+      if (popupContainer.style.opacity < 1) {
+        popupContainer.style.opacity = parseFloat(popupContainer.style.opacity) + 0.1;
+      } else {
+        clearInterval(interval);
+      }
+    }, 30);
 
     iconClose.addEventListener('click', () => {
-      menuOuter.classList.remove('menu-outer-blur');
-      popupContainer.style.display = 'none'
+      var interval = setInterval(function () {
+        if (popupContainer.style.opacity > 0) {
+          popupContainer.style.opacity = parseFloat(popupContainer.style.opacity) - 0.1;
+        } else {
+          clearInterval(interval);
+          popupContainer.style.display = 'none'
+        }
+      }, 30);
+
+      setTimeout(() => {
+        menuOuter.classList.remove('menu-outer-blur');
+      }, 300);
     })
 
   })
