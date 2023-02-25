@@ -15,6 +15,7 @@ const popupContainer = document.getElementById('team-popup-container')
 const teamCardContainer = document.createElement("div");
 teamMembers.forEach(member => {
   teamCardContainer.classList.add("team-card-container");
+  teamCardContainer.classList.add("w-full");
 
   const teamCard = document.createElement("div");
   teamCard.classList.add("team-card");
