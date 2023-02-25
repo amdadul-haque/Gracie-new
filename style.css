@@ -987,7 +987,7 @@ ul li a:hover {
 
   .main>section {
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
   }
 
 }
