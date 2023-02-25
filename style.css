@@ -340,6 +340,132 @@ main>footer {
 
 
 
+/* ========================== ABOUT =========================== */
+
+.main p {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.main>section {
+  padding: 10px 0;
+}
+
+
+.about-header {
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+
+.about-hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 25px 0px;
+}
+
+.about-hero-container .about-right {
+  grid-column: span 2;
+}
+
+.about-hero-container .about-left>p {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.about-right-title {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+/* ========================== ABOUT SERVICES =========================== */
+
+
+.about-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-section-header {
+  display: inline-block;
+  background-image: url(img/about/about-header-blank.png);
+  padding: 5px 30px;
+}
+
+.about-section-header h1 {
+  font-size: 100px;
+}
+
+.about-services-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.about-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.about-service-card .service-heading {
+  font-size: 40px;
+}
+
+.about-service-card p {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* ========================== ABOUT VALUES =========================== */
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-values-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-values .core-values,
+.about-mission .core-mission {
+  height: 100%;
+  background-image: url('img/about/web-square4.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-values .core-values h1 {
+  text-align: right;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+/* ========================== ABOUT MISSION =========================== */
+.about-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.about-mission .core-mission .core-mission-title {
+  font-size: 70px;
+  line-height: 80px;
+}
+
 /* ========================== SECTION 1 =========================== */
 .common-section {
   display: grid;
@@ -871,5 +997,10 @@ ul li a:hover {
 
   .footer-logo img {
     height: 50px;
+  }
+
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 }
