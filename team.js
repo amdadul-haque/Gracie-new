@@ -45,83 +45,33 @@ teamMembers.forEach(member => {
     while (popupContainer.firstChild) {
       popupContainer.removeChild(popupContainer.firstChild);
     }
-    // first part of the popup-container popup IMG
-    const teamPopupImg = document.createElement("div");
-    teamPopupImg.classList.add("team-popup-img");
 
-    const image = document.createElement("img");
-    image.src = member.imageSrc;
-    image.alt = member.name;
+    const popupContainerData = `<div class="team-popup-img">
+      <img src=${member.imageSrc} alt=${member.name}>
+      <div id="popup-close" class="popup-close">
+        <i id="iconClose" class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="team-popup-description">
+      <div class="popup-head">
+        <h2>${member.name}</h2>
+        <p>${member.designation}</p>
+      </div>
+      <div class="popup-details">
+        <p>${member.details}</p>
+      </div>
+      <div class="popup-icons">
+        <div>
+          <a href=${member.twitter} target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div>
+          <a href=${member.linkedin} target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>`
 
-    const popupClose = document.createElement("div");
-    popupClose.classList.add("popup-close");
+    popupContainer.innerHTML = popupContainerData;
 
-    const iconClose = document.createElement("i");
-    iconClose.setAttribute("class", "fa-solid fa-xmark");
-
-    popupClose.appendChild(iconClose)
-    teamPopupImg.appendChild(image)
-    teamPopupImg.appendChild(popupClose)
-
-    // second part
-    const teamPopupDescription = document.createElement("div");
-    teamPopupDescription.classList.add("team-popup-description");
-
-    const popupHead = document.createElement("div");
-    popupHead.classList.add("popup-head");
-
-    const popupName = document.createElement("p");
-    popupName.classList.add('member-name')
-    popupName.innerHTML = member.name;
-    const popupDesignation = document.createElement("p");
-    popupDesignation.innerHTML = member.designation;
-
-    popupHead.appendChild(popupName)
-    popupHead.appendChild(popupDesignation)
-
-
-    const popupDetails = document.createElement("div");
-    popupDetails.classList.add("popup-details");
-    const paragraph = document.createElement("p");
-    paragraph.innerHTML = member.details;
-    popupDetails.appendChild(paragraph)
-
-    const popupIcons = document.createElement("div");
-    popupIcons.classList.add("popup-icons");
-
-    // Twitter Icon
-    const iconHolderTwitter = document.createElement("div");
-    const linkTwitter = document.createElement("a");
-    linkTwitter.setAttribute('target', '_blank');
-    linkTwitter.setAttribute('href', member.twitter);
-    const iconTwitter = document.createElement("i");
-    iconTwitter.setAttribute("class", "fab fa-twitter");
-    linkTwitter.appendChild(iconTwitter)
-    iconHolderTwitter.appendChild(linkTwitter)
-
-    // LinkedIn Icon
-    const iconHolderLinkedIn = document.createElement("div");
-    const linkLinkedIn = document.createElement("a");
-    linkLinkedIn.setAttribute('target', '_blank');
-    linkLinkedIn.setAttribute('href', member.linkedin);
-    const iconLinkedIn = document.createElement("i");
-    iconLinkedIn.setAttribute("class", "fa-brands fa-linkedin-in");
-    linkLinkedIn.appendChild(iconLinkedIn)
-    iconHolderLinkedIn.appendChild(linkLinkedIn)
-
-    popupIcons.appendChild(iconHolderTwitter);
-    popupIcons.appendChild(iconHolderLinkedIn);
-
-    // popup descrition
-    teamPopupDescription.appendChild(popupHead)
-    teamPopupDescription.appendChild(popupDetails)
-    teamPopupDescription.appendChild(popupIcons)
-
-
-    popupContainer.appendChild(teamPopupImg)
-    popupContainer.appendChild(teamPopupDescription)
-
-    console.log(member.name, member.designation)
     popupContainer.style.display = 'block'
     popupContainer.style.opacity = 0;
     menuOuter.style.display = 'block'
@@ -134,7 +84,7 @@ teamMembers.forEach(member => {
       }
     }, 30);
 
-
+    const iconClose = document.getElementById('iconClose')
     iconClose.addEventListener('click', () => {
       var interval = setInterval(function () {
         if (popupContainer.style.opacity > 0) {
@@ -151,9 +101,6 @@ teamMembers.forEach(member => {
 
 });
 
-const title = "Team"
-const data = `<h1 class="page-title">${title}</h1>`;
-teamContainer.innerHTML = data
 
 teamContainer.appendChild(teamCardContainer)
 
