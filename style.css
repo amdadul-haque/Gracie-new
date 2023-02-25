@@ -271,7 +271,8 @@ main {
   scroll-snap-type: y mandatory;
 }
 
-main>section {
+main>section,
+main>footer {
   height: 100vh;
   scroll-snap-align: start;
 }
@@ -300,7 +301,8 @@ main>section {
   left: 0;
   z-index: 1;
   backdrop-filter: blur(10px);
-  transition: 1s;
+  opacity: 0;
+  display: none;
 }
 
 .menuBtn-outer {
@@ -575,7 +577,7 @@ main>section {
   gap: 15px;
   display: none;
   cursor: pointer;
-  animation: animate 1s linear;
+  animation: animate .5s linear;
   animation-fill-mode: forwards;
 }
 

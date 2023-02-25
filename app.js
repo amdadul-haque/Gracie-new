@@ -22,8 +22,8 @@ fetch('./header.html')
       if (menuHeight) {
         menuHeight = false
         setTimeout(() => {
-          menuOuter.classList.toggle('menu-outer-blur');
-          menuOuter.classList.remove('hidden');
+          menuOuter.style.opacity = 1;
+          menuOuter.style.display = 'none'
         }, 1000)
         clearInterval(id);
         id = setInterval(() => {
@@ -32,13 +32,14 @@ fetch('./header.html')
           } else {
             pos -= speed;
             menuContentOuter.style.height = `${pos}px`
+            menuOuter.style.opacity = parseFloat(menuOuter.style.opacity) - 0.1;
           }
         }, 10)
 
       }
       else {
-        menuOuter.classList.toggle('menu-outer-blur');
-        menuOuter.classList.remove('hidden');
+        menuOuter.style.opacity = 0;
+        menuOuter.style.display = 'block'
         menuHeight = true
         clearInterval(id);
         id = setInterval(() => {
@@ -47,6 +48,7 @@ fetch('./header.html')
           } else {
             pos += speed;
             menuContentOuter.style.height = `${pos}px`
+            menuOuter.style.opacity = parseFloat(menuOuter.style.opacity) + 0.1;
           }
         }, 10)
       }
