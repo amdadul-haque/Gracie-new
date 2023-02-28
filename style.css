@@ -265,7 +265,7 @@ img {
 }
 
 
-main {
+/* main {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -275,7 +275,7 @@ main>section,
 main>footer {
   height: 100vh;
   scroll-snap-align: start;
-}
+} */
 
 /* ========================== END OF GLOBAL STYLES =========================== */
 
@@ -306,10 +306,10 @@ main>footer {
 }
 
 .menuBtn-outer {
-  top: 10px;
-  right: 20px;
   width: 300px;
-  margin-right: 10px;
+  top: 10px;
+  right: 10px;
+  /* margin-right: 10px; */
   z-index: 3;
 }
 
@@ -985,9 +985,9 @@ ul li a:hover {
 }
 
 @media only screen and (max-width: 1100px) {
-  .menu-outer-blur {
+  /* .menu-outer-blur {
     max-width: calc(100vw - 15px);
-  }
+  } */
 
   .team-card-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -997,9 +997,9 @@ ul li a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .menu-outer-blur {
+  /* .menu-outer-blur {
     max-width: calc(100vw - 10px);
-  }
+  } */
 
   .team-card-container {
     grid-template-columns: 1fr 1fr;
@@ -1041,9 +1041,9 @@ ul li a:hover {
 
 
 @media only screen and (max-width: 500px) {
-  .menu-outer-blur {
+  /* .menu-outer-blur {
     max-width: calc(100vw - 5px);
-  }
+  } */
 
   .menuBtn-outer {
     right: 5px;
