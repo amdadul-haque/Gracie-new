@@ -265,7 +265,7 @@ img {
 }
 
 
-/* main {
+main {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -275,7 +275,7 @@ main>section,
 main>footer {
   height: 100vh;
   scroll-snap-align: start;
-} */
+}
 
 /* ========================== END OF GLOBAL STYLES =========================== */
 
@@ -308,7 +308,7 @@ main>footer {
 .menuBtn-outer {
   width: 300px;
   top: 10px;
-  right: 10px;
+  right: 30px;
   /* margin-right: 10px; */
   z-index: 3;
 }
