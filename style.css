@@ -338,23 +338,17 @@ main>footer {
   clear: both;
 }
 
-
-
 /* ========================== ABOUT =========================== */
 
-.main p {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.main>section {
-  padding: 10px 0;
-}
 
 
 .about-header {
-  padding-top: 50px;
-  padding-bottom: 5px;
+  height: 100px;
+  background-image: url(img/about/about-header-blank.png);
+}
+
+.about-header h1 {
+  font-size: 100px;
 }
 
 .about-hero-container {
@@ -395,8 +389,8 @@ main>footer {
 
 .about-section-header {
   display: inline-block;
-  background-image: url(img/about/about-header-blank.png);
-  padding: 5px 30px;
+  /* background-image: url(img/about/about-header-blank.png); */
+  padding: 5px 0;
 }
 
 .about-section-header h1 {
@@ -448,7 +442,8 @@ main>footer {
 .about-values .core-values,
 .about-mission .core-mission {
   height: 100%;
-  background-image: url('img/about/web-square4.png');
+  background-image: url('img/about/web-square4-transparent.png');
+  background-color: #ff99cb;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -517,7 +512,7 @@ main>footer {
 }
 
 .mission-details {
-  max-width: 1000px;
+  /* width: 100%; */
 }
 
 .mission-details p {
@@ -727,17 +722,24 @@ main>footer {
 
 /* ========================== TEAM =========================== */
 .team {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px 0;
-  gap: 30px;
 }
 
 .team-header {
-  align-self: self-start;
+  height: 100px;
+  display: flex;
+  /* align-items: center; */
+  background-image: url('img/about/about-header-blank.png');
+}
+
+.team-header h1 {
+  font-size: 100px;
+  text-align: left;
 }
 
 .section-title {
@@ -746,9 +748,11 @@ main>footer {
 }
 
 .team-card-container {
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .team-card {
@@ -974,6 +978,10 @@ ul li a:hover {
   .newsletter-input {
     width: 400px;
   }
+
+  .mission-details {
+    max-width: 1000px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -985,10 +993,6 @@ ul li a:hover {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .main>section {
-    height: auto;
-    /* padding: 10px; */
-  }
 
 }
 
@@ -1066,6 +1070,12 @@ ul li a:hover {
 
   .footer-logo img {
     height: 50px;
+  }
+
+  .newsletter .newsletter-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 
