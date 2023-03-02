@@ -549,10 +549,11 @@ main>footer {
 }
 
 .team-header {
-  height: 100px;
+  height: 300px;
   display: flex;
-  /* align-items: center; */
-  background-image: url('img/about/about-header-blank.png');
+  background-image: url('img/team/team-header-blank.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .team-header h1 {
@@ -818,6 +819,12 @@ ul li a:hover {
   /* .menu-outer-blur {
     max-width: calc(100vw - 10px);
   } */
+
+  .team-header {
+    height: 200px;
+    display: flex;
+    background-image: url('img/mobile/team-header-blank-200-mobile.png');
+  }
 
   .team-card-container {
     grid-template-columns: 1fr 1fr;

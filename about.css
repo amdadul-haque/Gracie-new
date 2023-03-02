@@ -166,6 +166,8 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  padding: 10px;
+  padding-bottom: 30px;
 }
 
 .mission-content {
@@ -273,7 +275,7 @@
 
   .core-values,
   .core-mission-title {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 50px;
   }
 }
