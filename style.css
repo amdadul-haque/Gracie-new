@@ -280,8 +280,7 @@ main>footer {
 /* ========================== END OF GLOBAL STYLES =========================== */
 
 /*========================== HERO =========================== */
-#hero,
-.team-container {
+#hero {
   background: url('./img/background.png');
   background-size: cover;
   background-attachment: fixed;
@@ -577,14 +576,23 @@ main>footer {
 
 .team-card {
   position: relative;
+  padding: 20px;
+  border: 1px solid black;
 }
 
+
+.team-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 .card-hover-brief {
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
+  transform: translateX(-20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -627,11 +635,7 @@ main>footer {
 
 
 
-.team-card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+
 
 .team-popup-container {
   position: fixed;
@@ -716,6 +720,7 @@ main>footer {
 /* ========================== FOOTER =========================== */
 #footer {
   padding-top: 100px;
+  height: 100vh;
   min-height: 100vh;
   background-color: #eee;
 }
@@ -746,6 +751,7 @@ main>footer {
   font-size: 16px;
   border: none;
   border-radius: 5px;
+  min-width: 350px;
 }
 
 
@@ -902,6 +908,15 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .team-container {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .team-card-container {
+    gap: 15px;
   }
 
 }
