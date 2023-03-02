@@ -282,8 +282,6 @@
 
 @media only screen and (max-width: 480px) {
   .about-header {
-    color: red;
-    font-size: 20px;
     padding: 10px 5px;
   }
 
