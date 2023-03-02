@@ -34,7 +34,7 @@
 
 .hero-right-title {
   font-size: 40px;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 .about-hero-container .about-left>p {
@@ -78,7 +78,7 @@
 }
 
 
-.about-service-card .service-heading {
+.service-heading {
   font-size: 35px;
 }
 
@@ -94,6 +94,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 10px;
 }
 
 .values-header-container {
@@ -105,6 +106,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+.about-values-content p {
+  font-size: 30px;
 }
 
 .about-values .core-values,
@@ -130,6 +135,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding: 10px;
 }
 
 .vision-cotent {
@@ -150,8 +156,8 @@
 }
 
 .vision-right p {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 /* ========================== ABOUT MISSION =========================== */
@@ -200,6 +206,11 @@
     padding: 10px;
   }
 
+  .about-hero-container .about-left>p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .about-services {
     padding: 10px;
   }
@@ -212,8 +223,19 @@
     grid-template-columns: 1fr;
   }
 
-  .about-service-card .service-heading {
+  .service-heading {
     font-size: 30px;
+    line-height: 35px;
+  }
+
+  .vision-left h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .vision-right p {
+    font-size: 24px;
+    line-height: 30px;
   }
 
   section.about-values {
@@ -224,12 +246,20 @@
   .about-values-content {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 10px;
+  }
+
+  .about-values-content p {
+    font-size: 24px;
   }
 
   .about-values .core-values h1 {
     font-size: 60px;
     text-align: center;
+  }
+
+  .mission-details p {
+    font-size: 24px;
+    line-height: 30px;
   }
 
 
@@ -239,7 +269,12 @@
 
   .vision-cotent {
     grid-template-columns: 1fr;
-    padding: 10px;
+  }
+
+  .core-values,
+  .core-mission-title {
+    font-size: 45px;
+    line-height: 50px;
   }
 }
 
@@ -264,7 +299,6 @@
   .about-values-content {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 10px;
   }
 
   .about-values .core-values h1 {
@@ -279,6 +313,6 @@
 
   .vision-cotent {
     grid-template-columns: 1fr;
-    padding: 10px;
   }
+
 }
