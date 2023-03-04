@@ -540,10 +540,10 @@ main>footer {
 
 /* ========================== TEAM =========================== */
 .team {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 50px 0;
 }
@@ -570,14 +570,12 @@ main>footer {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 20px;
 }
 
 .team-card {
   position: relative;
-  padding: 20px;
-  border: 1px solid black;
 }
 
 
@@ -592,7 +590,6 @@ main>footer {
   top: 0;
   height: 100%;
   width: 100%;
-  transform: translateX(-20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
